@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, shareReplay } from 'rxjs/operators';
+import { AuthService } from '../shared/services/auth.service';
 
 @Component({
   selector: 'app-layout',
@@ -16,23 +17,24 @@ export class LayoutComponent implements OnInit {
   );
 
   routes = [
-    { title: 'Tareas', path: '/tareas', icon: 'app_registration' },
-    { title: 'Clima', path: '/test-1', icon: 'ac_unit' },
-    { title: 'Últimos Domingos', path: '/test-2', icon: 'event' },
-    { title: 'Años bisiestos', path: '/test-3', icon: 'date_range' },
-    { title: 'Matrix', path: '/test-4', icon: 'calculate' },
-    { title: 'Contador de letras', path: '/test-5', icon: 'sort_by_alpha' }
+    { title: 'Todos los países', path: '/all-countries', icon: 'flag' },
+    { title: 'Por nombre', path: '/per-name', icon: 'drive_file_rename_outline' },
+    { title: 'Por código', path: '/per-code', icon: 'qr_code' },
+    { title: 'Por moneda', path: '/per-currency', icon: 'monetization_on' },
+    { title: 'Por idioma', path: '/per-language', icon: 'translate' },
+    { title: 'Otros filtros', path: '/all-other', icon: 'search' }
   ]
 
   constructor(
-    private breakpointObserver: BreakpointObserver
+    private breakpointObserver: BreakpointObserver,
+    public authSrv: AuthService
   ) { }
 
   ngOnInit(): void {
   }
 
   logout() {
-    
+    this.authSrv.logout();
   }
 
 }

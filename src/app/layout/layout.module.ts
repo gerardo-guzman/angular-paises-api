@@ -18,6 +18,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { LayoutRoutesModule } from './layout.routes';
+import { AllCountriesComponent } from './views/all-countries/all-countries.component';
+import { PerNameComponent } from './views/per-name/per-name.component';
+import { PerCodeComponent } from './views/per-code/per-code.component';
+import { PerCurrencyComponent } from './views/per-currency/per-currency.component';
+import { PerLanguageComponent } from './views/per-language/per-language.component';
+import { PerAllOthersComponent } from './views/per-all-others/per-all-others.component';
 
 const MY_MAT_MODULES = [
   MatCardModule,
@@ -37,7 +43,13 @@ const MY_MAT_MODULES = [
 
 @NgModule({
   declarations: [
-    LayoutComponent
+    LayoutComponent,
+    AllCountriesComponent,
+    PerNameComponent,
+    PerCodeComponent,
+    PerCurrencyComponent,
+    PerLanguageComponent,
+    PerAllOthersComponent
   ],
   imports: [
     CommonModule,
