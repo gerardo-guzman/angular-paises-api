@@ -37,6 +37,7 @@ export class PerNameComponent implements OnInit {
       this.nameForm.markAllAsTouched();
       return;
     }
+    this.countries = null;
     const { name, fullName } = this.nameForm.value;
     this.isLoading = true;
     this.countrySrv.getCountryPerName(name, fullName).subscribe(data => {

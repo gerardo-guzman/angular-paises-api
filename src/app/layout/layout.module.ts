@@ -28,7 +28,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CountryViewerComponent } from './components/country-viewer/country-viewer.component';
-
+import { MatChipsModule } from '@angular/material/chips';
 
 const MY_MAT_MODULES = [
   MatCardModule,
@@ -46,6 +46,7 @@ const MY_MAT_MODULES = [
   MatDatepickerModule,
   MatPaginatorModule,
   MatSlideToggleModule,
+  MatChipsModule
 ];
 
 @NgModule({
