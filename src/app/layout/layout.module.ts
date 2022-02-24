@@ -26,6 +26,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { CountryViewerComponent } from './components/country-viewer/country-viewer.component';
 
 
 const MY_MAT_MODULES = [
@@ -43,6 +45,7 @@ const MY_MAT_MODULES = [
   MatMenuModule,
   MatDatepickerModule,
   MatPaginatorModule,
+  MatSlideToggleModule,
 ];
 
 @NgModule({
@@ -54,7 +57,8 @@ const MY_MAT_MODULES = [
     PerCurrencyComponent,
     PerLanguageComponent,
     PerAllOthersComponent,
-    CountryCardComponent
+    CountryCardComponent,
+    CountryViewerComponent
   ],
   imports: [
     CommonModule,

@@ -27,10 +27,7 @@ export class AllCountriesComponent implements OnInit, AfterViewInit {
   ngOnInit(): void { }
 
   ngAfterViewInit() {
-    this.paginator._intl.itemsPerPageLabel = 'Países por página:';
-    this.paginator._intl.nextPageLabel = 'siguiente página';
-    this.paginator._intl.previousPageLabel = 'página anterior';
-    
+
   }
 
   search() {
@@ -40,13 +37,6 @@ export class AllCountriesComponent implements OnInit, AfterViewInit {
       this.countries = data;
       this.numCountries = this.countries.length;
       this.currentCountries = [];
-      if (this.numCountries > 5) {
-        for (let i = 0; i < 5; i++) {
-          this.currentCountries.push(this.countries[i]);
-        }
-      } else {
-        this.currentCountries = this.countries;
-      }
     }, (err) => {
       this.isLoading = false;
       this.notifySrv.snackbarError('Hubo un error al consultar los países', 'X', false);

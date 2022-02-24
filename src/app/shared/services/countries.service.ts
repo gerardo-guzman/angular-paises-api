@@ -18,7 +18,7 @@ export class CountriesService {
 
   getCountryPerName(name: string, fullName: boolean): Observable<any> {
     const query = fullName ? '?fullText=true' : '';
-    return this.http.get(`${this.BASE_COUNTRY_URL}${name}${query}`);
+    return this.http.get(`${this.BASE_COUNTRY_URL}name/${name}${query}`);
   }
 
   getCountryPerCode(codes: string): Observable<any> {

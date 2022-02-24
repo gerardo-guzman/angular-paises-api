@@ -1,0 +1,15 @@
+<app-country-card
+            *ngFor="let country of currentCountries"
+            [country]="country"
+></app-country-card>
+
+<div class="footer-paginator">
+    <mat-paginator [length]="numCountries"
+       [pageSize]="5"
+       [pageSizeOptions]="[5]"
+        fixed
+       (page)="pageEvent = $event; handlePageEvents($event)"
+       [ngClass]="{ 'hide': !numCountries || numCountries < 5 }"
+    >
+    </mat-paginator>
+</div>
