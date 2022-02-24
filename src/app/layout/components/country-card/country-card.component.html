@@ -1,0 +1,42 @@
+<mat-card class="w-100 my-2">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"
+            [style.backgroundImage]="'url('+ country.flags.png +')'"
+        ></div>
+        <mat-card-title>{{country.name.official}} ({{country.name.common}})</mat-card-title>
+        <mat-card-subtitle>{{country.region}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row w-100 mx-0 px-3 align-items-center">
+            <mat-form-field appearance="outline" class="col-md-4">
+                <mat-label>Nombre oficial</mat-label>
+                <input matInput [value]="country.name.official" readonly>
+                <mat-icon matPrefix>drive_file_rename_outline</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="col-md-4">
+                <mat-label>Región</mat-label>
+                <input matInput [value]="country.region" readonly>
+                <mat-icon matPrefix>south_america</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="col-md-4">
+                <mat-label>Capital(es)</mat-label>
+                <input matInput [value]="country.capital" readonly>
+                <mat-icon matPrefix>star</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="col-md-3">
+                <mat-label>Área</mat-label>
+                <input matInput [value]="country.area" readonly>
+                <mat-icon matPrefix>crop</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="col-md-3">
+                <mat-label>Población</mat-label>
+                <input matInput [value]="country.population" readonly>
+                <mat-icon matPrefix>groups</mat-icon>
+            </mat-form-field>
+            <mat-checkbox class="example-margin col-md-3" [checked]="country.independent"
+            (click)="$event.preventDefault()">País independiente</mat-checkbox>
+            <mat-checkbox class="example-margin col-md-3" [checked]="!country.landlocked"
+            (click)="$event.preventDefault()">Tiene Mar</mat-checkbox>
+        </div>
+    </mat-card-content>
+</mat-card>

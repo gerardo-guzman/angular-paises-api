@@ -21,7 +21,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const MY_MAT_MODULES = [
   MatCardModule,
@@ -36,7 +36,9 @@ const MY_MAT_MODULES = [
   MatListModule,
   MatDialogModule,
   MatCheckboxModule,
-  MatMenuModule
+  MatMenuModule,
+  MatSnackBarModule,
+  MatDialogModule,
 ];
 
 @NgModule({
